@@ -1,2 +1,2 @@
-# TrainingW-Repo01
+# Cypress-RepoTests
 Training repo exercise
