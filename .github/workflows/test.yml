@@ -1,0 +1,25 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main # Change 'main' to the branch you want to trigger the tests on
+
+jobs:
+  test:
+    runs-on: ubuntu-latest # Set the operating system for the job
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2 # Action to check out the repository
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2 # Action to set up Node.js environment
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Cypress tests
+        run: npm test
